@@ -4,7 +4,7 @@ public class Cashier {
 	public Envelope makeChange(Envelope e, int dollars, int cents) {
 		Envelope newE = new Envelope(0,0,0,0,0);
 		return newE;
-		
+		//just adding a comment
 		/*int remCents = cents;
 		int q = remCents % 25;
 		remCents = remCents - (q*25);
