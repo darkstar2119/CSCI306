@@ -1,20 +1,16 @@
-package price;
+package source;
 
 public class Cashier {
-	public Envelope makeChange(Envelope e, int dollars, int cents) {
-		
+	public Envelope makeChange(Envelope e, int dollars, int cents) throws NegativeBalanceException {
+
 		int cmpChange = (dollars*100) + cents;
 		int chng = e.getTotalCents() - cmpChange;
-		
+
 		String error = "Negative balance.";
 		if (chng < 0) {
-			try {
-				throw new NegativeBalanceException(error);
-			} catch (NegativeBalanceException nbe) {
-				System.out.println(error);
-			}
+			throw new NegativeBalanceException(error);
 		}
-			
+
 		int remChng = chng;
 		int dollas = remChng / 100;
 		remChng = remChng - (dollas*100);
@@ -25,9 +21,9 @@ public class Cashier {
 		int n = remChng / 5;
 		remChng = remChng - (n*5);
 		int p = remChng;
-		
+
 		Envelope chngEnvelope = new Envelope(dollas,q,d,n,p);
 		return chngEnvelope;
-		
+
 	}
 }
