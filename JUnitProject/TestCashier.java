@@ -9,7 +9,7 @@ import price.Envelope;
 public class TestCashier {
 	Cashier testC;
 	Envelope testE = new Envelope(0, 0, 0, 0, 0);
-	
+	//added comment
 	@Test
 	public void testMakeChange() {
 		Envelope expected = new Envelope(0,0,0,0,0);
