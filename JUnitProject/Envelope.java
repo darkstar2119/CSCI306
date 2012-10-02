@@ -49,6 +49,7 @@ public class Envelope {
 	}
 	
 	public int getTotalCents() {
-		return 0;
+		int totalCents = (dollars*100) + (quarters*25) + (dimes*10) + (nickels*5) + pennies;
+		return totalCents;
 	}
 }
