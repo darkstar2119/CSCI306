@@ -7,17 +7,20 @@ import javax.swing.JPanel;
 public class MyDrawing extends JPanel {
 	private Cat cat;
 	private Mouse mousey;
+	private Mouse mickey;
 	public MyDrawing() 
 	{
 		// Add critters to the drawing
 		cat = new Cat();
 		mousey = new Mouse();
+		mickey = new Mouse();
 	}
 	// paintComponent is called automatically when the frame needs
 	// to display (e.g., when the program starts)
 	public void paintComponent(Graphics g) {
 		cat.draw(g, 50, 50);
 		mousey.draw(g, 100, 200);
+		mickey.draw(g, 150, 250);
 	}
 	
 	/**
